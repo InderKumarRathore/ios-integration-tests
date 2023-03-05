@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D85036A29B439C100C1D691 /* BalancesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85036929B439C100C1D691 /* BalancesApi.swift */; };
 		1D98B85129B2FAB800BFFBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */; };
 		1D98B85329B2FAB800BFFBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */; };
 		1D98B85529B2FAB800BFFBA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85429B2FAB800BFFBA8 /* ViewController.swift */; };
@@ -15,6 +16,13 @@
 		1D98B85D29B2FABA00BFFBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D98B85B29B2FABA00BFFBA8 /* LaunchScreen.storyboard */; };
 		1D98B86B29B2FB7700BFFBA8 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B86A29B2FB7700BFFBA8 /* UnitTests.swift */; };
 		1D98B87829B2FB8800BFFBA8 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */; };
+		1D98B88629B2FCA800BFFBA8 /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */; };
+		1D98B88729B2FCA800BFFBA8 /* BalanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */; };
+		1D98B88829B2FCA800BFFBA8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */; };
+		1D98B88929B2FCA800BFFBA8 /* BalanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */; };
+		1D98B88A29B2FCA800BFFBA8 /* BalanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */; };
+		1D98B88B29B2FCA800BFFBA8 /* BalancePresentationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */; };
+		1D98B88C29B2FCA800BFFBA8 /* BalanceInteractorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D85036929B439C100C1D691 /* BalancesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesApi.swift; sourceTree = "<group>"; };
 		1D98B84D29B2FAB800BFFBA8 /* IntegrationTestsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationTestsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,13 @@
 		1D98B86A29B2FB7700BFFBA8 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		1D98B87529B2FB8800BFFBA8 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
+		1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRouter.swift; sourceTree = "<group>"; };
+		1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceAssembly.swift; sourceTree = "<group>"; };
+		1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractor.swift; sourceTree = "<group>"; };
+		1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresentationContract.swift; sourceTree = "<group>"; };
+		1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractorContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D85036829B439AA00C1D691 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				1D85036929B439C100C1D691 /* BalancesApi.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		1D98B84429B2FAB800BFFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +121,8 @@
 		1D98B84F29B2FAB800BFFBA8 /* IntegrationTestsSample */ = {
 			isa = PBXGroup;
 			children = (
+				1D85036829B439AA00C1D691 /* APIs */,
+				1D98B87E29B2FC8200BFFBA8 /* Viper */,
 				1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */,
 				1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */,
 				1D98B85429B2FAB800BFFBA8 /* ViewController.swift */,
@@ -122,6 +148,20 @@
 				1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */,
 			);
 			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		1D98B87E29B2FC8200BFFBA8 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */,
+				1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */,
+				1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */,
+				1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */,
+				1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */,
+				1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */,
+				1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */,
+			);
+			path = Viper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,9 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D98B88929B2FCA800BFFBA8 /* BalanceAssembly.swift in Sources */,
 				1D98B85529B2FAB800BFFBA8 /* ViewController.swift in Sources */,
+				1D98B88729B2FCA800BFFBA8 /* BalanceRouter.swift in Sources */,
+				1D98B88A29B2FCA800BFFBA8 /* BalanceInteractor.swift in Sources */,
+				1D98B88B29B2FCA800BFFBA8 /* BalancePresentationContract.swift in Sources */,
+				1D85036A29B439C100C1D691 /* BalancesApi.swift in Sources */,
+				1D98B88C29B2FCA800BFFBA8 /* BalanceInteractorContract.swift in Sources */,
 				1D98B85129B2FAB800BFFBA8 /* AppDelegate.swift in Sources */,
+				1D98B88829B2FCA800BFFBA8 /* BalanceViewController.swift in Sources */,
 				1D98B85329B2FAB800BFFBA8 /* SceneDelegate.swift in Sources */,
+				1D98B88629B2FCA800BFFBA8 /* BalancePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +487,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +516,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -4,6 +4,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Home"
+    }
+
+    @IBAction func showBalance(_ sender: Any) {
+        let assembly = BalanceAssembly()
+        let viewController = assembly.build()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
