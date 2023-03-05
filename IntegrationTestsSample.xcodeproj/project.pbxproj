@@ -20,7 +20,7 @@
 		1D98B85A29B2FABA00BFFBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D98B85929B2FABA00BFFBA8 /* Assets.xcassets */; };
 		1D98B85D29B2FABA00BFFBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D98B85B29B2FABA00BFFBA8 /* LaunchScreen.storyboard */; };
 		1D98B86B29B2FB7700BFFBA8 /* BalancePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B86A29B2FB7700BFFBA8 /* BalancePresenterTests.swift */; };
-		1D98B87829B2FB8800BFFBA8 /* IntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */; };
+		1D98B87829B2FB8800BFFBA8 /* BalanceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87729B2FB8800BFFBA8 /* BalanceIntegrationTests.swift */; };
 		1D98B88629B2FCA800BFFBA8 /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */; };
 		1D98B88729B2FCA800BFFBA8 /* BalanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */; };
 		1D98B88829B2FCA800BFFBA8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */; };
@@ -65,7 +65,7 @@
 		1D98B86829B2FB7700BFFBA8 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B86A29B2FB7700BFFBA8 /* BalancePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresenterTests.swift; sourceTree = "<group>"; };
 		1D98B87529B2FB8800BFFBA8 /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTests.swift; sourceTree = "<group>"; };
+		1D98B87729B2FB8800BFFBA8 /* BalanceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceIntegrationTests.swift; sourceTree = "<group>"; };
 		1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
 		1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRouter.swift; sourceTree = "<group>"; };
 		1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				1D85037029B4470100C1D691 /* Mocks */,
-				1D98B87729B2FB8800BFFBA8 /* IntegrationTests.swift */,
+				1D98B87729B2FB8800BFFBA8 /* BalanceIntegrationTests.swift */,
 			);
 			path = IntegrationTests;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D98B87829B2FB8800BFFBA8 /* IntegrationTests.swift in Sources */,
+				1D98B87829B2FB8800BFFBA8 /* BalanceIntegrationTests.swift in Sources */,
 				1D85037229B4470100C1D691 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
