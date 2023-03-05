@@ -65,6 +65,42 @@ final class BalancePresenterTests: XCTestCase {
     }
 
     func test_sendMoneyTapped_whenApiIsSuccess() {
+        interactor.sendMoneyClosure = {
+            $1(.success(()))
+        }
+
+        presenter.sendMoneyTapped()
         
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertEqual(
+            view.configureReceivedInvocations[0],
+            .init(balance: "Sending money...")
+        )
+        XCTAssertEqual(
+            view.configureReceivedInvocations[1],
+            .init(balance: "Transaction successful")
+        )
+        XCTAssertTrue(view.stopLoadingCalled)
+        XCTAssertEqual(interactor.sendMoneyReceivedArguments?.money, 100)
+    }
+
+    func test_sendMoneyTapped_whenApiIsFailure() {
+        interactor.sendMoneyClosure = {
+            $1(.failure(.insufficientBalance))
+        }
+
+        presenter.sendMoneyTapped()
+
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertEqual(
+            view.configureReceivedInvocations[0],
+            .init(balance: "Sending money...")
+        )
+        XCTAssertEqual(
+            view.configureReceivedInvocations[1],
+            .init(balance: "Insufficient balance")
+        )
+        XCTAssertTrue(view.stopLoadingCalled)
+        XCTAssertEqual(interactor.sendMoneyReceivedArguments?.money, 100)
     }
 }
