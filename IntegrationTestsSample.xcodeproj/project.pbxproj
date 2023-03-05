@@ -98,13 +98,6 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
-		1D85036B29B4443800C1D691 /* SomeOtherViperModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SomeOtherViperModule;
-			sourceTree = "<group>";
-		};
 		1D98B84429B2FAB800BFFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +121,6 @@
 		1D98B84F29B2FAB800BFFBA8 /* IntegrationTestsSample */ = {
 			isa = PBXGroup;
 			children = (
-				1D85036B29B4443800C1D691 /* SomeOtherViperModule */,
 				1D85036829B439AA00C1D691 /* APIs */,
 				1D98B87E29B2FC8200BFFBA8 /* Viper */,
 				1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */,
