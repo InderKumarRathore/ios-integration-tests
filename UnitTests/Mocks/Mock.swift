@@ -163,3 +163,17 @@ final class BalancesApiMock: BalancesApi {
         sendMoneyClosure?(amount, completion)
     }
 }
+
+final class MoneyFormatterMock: MoneyFormatter {
+    // MARK: - format
+    private(set) var formatCallsCount = 0
+    var formatReturnValue: String!
+    var formatCalled: Bool {
+        formatCallsCount > 0
+    }
+
+    func format(money: Int) -> String {
+        formatCallsCount += 1
+        return formatReturnValue
+    }
+}

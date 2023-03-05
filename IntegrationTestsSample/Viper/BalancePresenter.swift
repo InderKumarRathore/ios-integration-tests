@@ -2,10 +2,16 @@ final class BalancePresenterImpl {
     weak var view: BalanceView?
     private let router: BalanceRouter
     private let interactor: BalanceInteractor
+    private let moneyFormatter: MoneyFormatter
 
-    init(router: BalanceRouter, interactor: BalanceInteractor) {
+    init(
+        router: BalanceRouter,
+        interactor: BalanceInteractor,
+        moneyFormatter: MoneyFormatter
+    ) {
         self.router = router
         self.interactor = interactor
+        self.moneyFormatter = moneyFormatter
     }
 
 }
@@ -19,7 +25,8 @@ extension BalancePresenterImpl: BalancePresenter {
             self.view?.stopLoading()
             switch result {
             case let .success(balance):
-                self.view?.configure(viewModel: .init(balance: "Your balance is $\(balance)"))
+                let money = self.moneyFormatter.format(money: balance)
+                self.view?.configure(viewModel: .init(balance: "Your balance is \(money)"))
             case .failure:
                 self.view?.showError(message: "Something went wrong please try again")
             }
