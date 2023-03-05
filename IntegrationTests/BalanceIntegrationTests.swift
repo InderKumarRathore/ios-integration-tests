@@ -46,6 +46,7 @@ final class BalanceIntegrationTests: XCTestCase {
             .init(balance: "Your balance is $30")
         )
         XCTAssertTrue(view.stopLoadingCalled)
+        XCTAssertTrue(api.getBalancesCalled)
     }
 
     func test_whenViewIsReadyAndApiFails() {
@@ -54,7 +55,9 @@ final class BalanceIntegrationTests: XCTestCase {
         }
 
         presenter.viewIsReady()
+
         XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertTrue(api.getBalancesCalled)
         XCTAssertEqual(
             view.showErrorReceivedInvocations[0],
             "Something went wrong please try again"
@@ -62,5 +65,46 @@ final class BalanceIntegrationTests: XCTestCase {
         XCTAssertTrue(view.stopLoadingCalled)
     }
 
-    
+    func test_sendMoneyTapped_whenApiIsSuccess() {
+        api.sendMoneyClosure = {
+            $1(.success(()))
+        }
+
+        presenter.sendMoneyTapped()
+
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertTrue(api.sendMoneyCalled)
+        XCTAssertEqual(api.sendMoneyReceivedArguments?.amount, 100)
+        XCTAssertEqual(
+            view.configureReceivedInvocations[0],
+            .init(balance: "Sending money...")
+        )
+        XCTAssertEqual(
+            view.configureReceivedInvocations[1],
+            .init(balance: "Transaction successful")
+        )
+        XCTAssertTrue(view.stopLoadingCalled)
+    }
+
+    func test_sendMoneyTapped_whenApiIsFailure() {
+        api.sendMoneyClosure = {
+            $1(.failure(NSError(domain: "", code: 10)))
+        }
+
+        presenter.sendMoneyTapped()
+
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertTrue(api.sendMoneyCalled)
+        XCTAssertEqual(api.sendMoneyReceivedArguments?.amount, 100)
+        XCTAssertEqual(
+            view.configureReceivedInvocations[0],
+            .init(balance: "Sending money...")
+        )
+        XCTAssertEqual(
+            view.configureReceivedInvocations[1],
+            .init(balance: "Insufficient balance")
+        )
+        XCTAssertTrue(view.stopLoadingCalled)
+    }
 }
+
