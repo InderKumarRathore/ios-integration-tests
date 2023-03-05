@@ -13,6 +13,7 @@
 		1D85037529B4482600C1D691 /* MoneyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85037429B4482600C1D691 /* MoneyFormatter.swift */; };
 		1D85037729B4566400C1D691 /* BalanceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85037629B4566400C1D691 /* BalanceInteractorTests.swift */; };
 		1D85037929B4584A00C1D691 /* MoneyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85037829B4584A00C1D691 /* MoneyFormatterTests.swift */; };
+		1D85037B29B45C6B00C1D691 /* MoneyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D85037A29B45C6B00C1D691 /* MoneyFormatterTests.swift */; };
 		1D98B85129B2FAB800BFFBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */; };
 		1D98B85329B2FAB800BFFBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */; };
 		1D98B85529B2FAB800BFFBA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B85429B2FAB800BFFBA8 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		1D85037429B4482600C1D691 /* MoneyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatter.swift; sourceTree = "<group>"; };
 		1D85037629B4566400C1D691 /* BalanceInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractorTests.swift; sourceTree = "<group>"; };
 		1D85037829B4584A00C1D691 /* MoneyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatterTests.swift; sourceTree = "<group>"; };
+		1D85037A29B45C6B00C1D691 /* MoneyFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyFormatterTests.swift; sourceTree = "<group>"; };
 		1D98B84D29B2FAB800BFFBA8 /* IntegrationTestsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationTestsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				1D85037029B4470100C1D691 /* Mocks */,
 				1D98B87729B2FB8800BFFBA8 /* BalanceIntegrationTests.swift */,
+				1D85037A29B45C6B00C1D691 /* MoneyFormatterTests.swift */,
 			);
 			path = IntegrationTests;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			files = (
 				1D98B87829B2FB8800BFFBA8 /* BalanceIntegrationTests.swift in Sources */,
 				1D85037229B4470100C1D691 /* Mock.swift in Sources */,
+				1D85037B29B45C6B00C1D691 /* MoneyFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
