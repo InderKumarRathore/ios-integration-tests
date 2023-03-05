@@ -1,4 +1,4 @@
-struct ViewModel {
+struct ViewModel: Equatable {
     let balance: String
 }
 

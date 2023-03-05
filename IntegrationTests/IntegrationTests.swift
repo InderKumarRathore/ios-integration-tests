@@ -1,3 +1,4 @@
+@testable import IntegrationTestsSample
 import XCTest
 
 final class IntegrationTests: XCTestCase {
