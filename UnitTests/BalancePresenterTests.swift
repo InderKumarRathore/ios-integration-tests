@@ -36,12 +36,35 @@ final class BalancePresenterTests: XCTestCase {
         interactor.fetchBalanceClosure = {
             $0(Result.success(100))
         }
+        moneyFormatter.formatReturnValue = "$30"
+
         presenter.viewIsReady()
 
         XCTAssertTrue(view.showLoadingCalled)
         XCTAssertEqual(
             view.configureReceivedInvocations.first,
-            .init(balance: "asdfasd")
+            .init(balance: "Your balance is $30")
         )
+        XCTAssertTrue(view.stopLoadingCalled)
+    }
+
+    func test_viewIsReady_whenApiIsFailed() {
+        interactor.fetchBalanceClosure = {
+            $0(Result.failure(NSError(domain: "", code: 4)))
+        }
+
+        presenter.viewIsReady()
+
+        XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertTrue(view.showErrorCalled)
+        XCTAssertEqual(
+            view.showErrorReceivedInvocations.first,
+            "Something went wrong please try again"
+        )
+        XCTAssertTrue(view.stopLoadingCalled)
+    }
+
+    func test_sendMoneyTapped_whenApiIsSuccess() {
+        
     }
 }
