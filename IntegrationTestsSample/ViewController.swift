@@ -8,8 +8,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showBalance(_ sender: Any) {
-        let assembly = BalanceAssembly()
-        let viewController = assembly.build()
+        let assembly = BalanceFactory()
+        let viewController = assembly.make()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -1,8 +1,8 @@
 import UIKit
 
-struct BalanceAssembly {
+struct BalanceFactory {
 
-    func build() -> UIViewController {
+    func make() -> UIViewController {
         let router = BalanceRouterImpl()
         let interactor = BalanceInteractorImpl(balancesApi: BalancesApiImpl())
         let presenter = BalancePresenterImpl(router: router, interactor: interactor)

@@ -19,7 +19,7 @@
 		1D98B88629B2FCA800BFFBA8 /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */; };
 		1D98B88729B2FCA800BFFBA8 /* BalanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */; };
 		1D98B88829B2FCA800BFFBA8 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */; };
-		1D98B88929B2FCA800BFFBA8 /* BalanceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */; };
+		1D98B88929B2FCA800BFFBA8 /* BalanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88229B2FCA800BFFBA8 /* BalanceFactory.swift */; };
 		1D98B88A29B2FCA800BFFBA8 /* BalanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */; };
 		1D98B88B29B2FCA800BFFBA8 /* BalancePresentationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */; };
 		1D98B88C29B2FCA800BFFBA8 /* BalanceInteractorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */; };
@@ -59,7 +59,7 @@
 		1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
 		1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRouter.swift; sourceTree = "<group>"; };
 		1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
-		1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceAssembly.swift; sourceTree = "<group>"; };
+		1D98B88229B2FCA800BFFBA8 /* BalanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceFactory.swift; sourceTree = "<group>"; };
 		1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractor.swift; sourceTree = "<group>"; };
 		1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresentationContract.swift; sourceTree = "<group>"; };
 		1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractorContract.swift; sourceTree = "<group>"; };
@@ -98,6 +98,13 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
+		1D85036B29B4443800C1D691 /* SomeOtherViperModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SomeOtherViperModule;
+			sourceTree = "<group>";
+		};
 		1D98B84429B2FAB800BFFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +128,7 @@
 		1D98B84F29B2FAB800BFFBA8 /* IntegrationTestsSample */ = {
 			isa = PBXGroup;
 			children = (
+				1D85036B29B4443800C1D691 /* SomeOtherViperModule */,
 				1D85036829B439AA00C1D691 /* APIs */,
 				1D98B87E29B2FC8200BFFBA8 /* Viper */,
 				1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */,
@@ -156,7 +164,7 @@
 				1D98B87F29B2FCA800BFFBA8 /* BalancePresenter.swift */,
 				1D98B88029B2FCA800BFFBA8 /* BalanceRouter.swift */,
 				1D98B88129B2FCA800BFFBA8 /* BalanceViewController.swift */,
-				1D98B88229B2FCA800BFFBA8 /* BalanceAssembly.swift */,
+				1D98B88229B2FCA800BFFBA8 /* BalanceFactory.swift */,
 				1D98B88329B2FCA800BFFBA8 /* BalanceInteractor.swift */,
 				1D98B88429B2FCA800BFFBA8 /* BalancePresentationContract.swift */,
 				1D98B88529B2FCA800BFFBA8 /* BalanceInteractorContract.swift */,
@@ -293,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D98B88929B2FCA800BFFBA8 /* BalanceAssembly.swift in Sources */,
+				1D98B88929B2FCA800BFFBA8 /* BalanceFactory.swift in Sources */,
 				1D98B85529B2FAB800BFFBA8 /* ViewController.swift in Sources */,
 				1D98B88729B2FCA800BFFBA8 /* BalanceRouter.swift in Sources */,
 				1D98B88A29B2FCA800BFFBA8 /* BalanceInteractor.swift in Sources */,
