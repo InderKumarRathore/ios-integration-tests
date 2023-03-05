@@ -3,5 +3,11 @@ protocol MoneyFormatter {
 }
 
 struct MoneyFormatterImpl: MoneyFormatter {
-    func format(money: Int) -> String { "$\(money)" }
+    func format(money: Int) -> String {
+        if money < 100 {
+            return "$\(money)"
+        } else {
+            return "$\(money) 💰"
+        }
+    }
 }
