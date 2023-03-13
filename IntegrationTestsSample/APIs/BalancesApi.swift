@@ -6,7 +6,7 @@ protocol BalancesApi {
 }
 
 final class BalancesApiImpl: BalancesApi {
-    private var dispatchTime: DispatchTime { DispatchTime.now() + 3 }
+    private var dispatchTime: DispatchTime { DispatchTime.now() + 2 }
     func getBalances(completion: @escaping (Result<Int, Error>) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
             completion(.success(50))
