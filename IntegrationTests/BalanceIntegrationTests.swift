@@ -34,22 +34,23 @@ final class BalanceIntegrationTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func test_whenViewIsReadyAndApiReturnsSuccessfully() {
+    func test_whenViewIsReadyAndApiReturnsSuccessfully_thenBalanceIsShown() {
         api.getBalancesClosure = {
             $0(.success(30))
         }
 
         presenter.viewIsReady()
+
         XCTAssertTrue(view.showLoadingCalled)
+        XCTAssertTrue(api.getBalancesCalled)
+        XCTAssertTrue(view.stopLoadingCalled)
         XCTAssertEqual(
             view.configureReceivedInvocations[0],
             .init(balance: "Your balance is $30")
         )
-        XCTAssertTrue(view.stopLoadingCalled)
-        XCTAssertTrue(api.getBalancesCalled)
     }
 
-    func test_whenViewIsReadyAndApiFails() {
+    func test_whenViewIsReadyAndApiFails_thenErrorMessageIsShown() {
         api.getBalancesClosure = {
             $0(.failure(NSError(domain: "", code: 5)))
         }
@@ -58,14 +59,14 @@ final class BalanceIntegrationTests: XCTestCase {
 
         XCTAssertTrue(view.showLoadingCalled)
         XCTAssertTrue(api.getBalancesCalled)
+        XCTAssertTrue(view.stopLoadingCalled)
         XCTAssertEqual(
             view.showErrorReceivedInvocations[0],
             "Something went wrong please try again"
         )
-        XCTAssertTrue(view.stopLoadingCalled)
     }
 
-    func test_sendMoneyTapped_whenApiIsSuccess() {
+    func test_sendMoneyTapped_whenApiIsSuccess_thenSuccessMessageIsShown() {
         api.sendMoneyClosure = {
             $1(.success(()))
         }
@@ -79,14 +80,14 @@ final class BalanceIntegrationTests: XCTestCase {
             view.configureReceivedInvocations[0],
             .init(balance: "Sending money...")
         )
+        XCTAssertTrue(view.stopLoadingCalled)
         XCTAssertEqual(
             view.configureReceivedInvocations[1],
             .init(balance: "Transaction successful")
         )
-        XCTAssertTrue(view.stopLoadingCalled)
     }
 
-    func test_sendMoneyTapped_whenApiIsFailure() {
+    func test_sendMoneyTapped_whenApiIsFailure_thenErrorMessageIsShown() {
         api.sendMoneyClosure = {
             $1(.failure(NSError(domain: "", code: 10)))
         }
@@ -100,11 +101,11 @@ final class BalanceIntegrationTests: XCTestCase {
             view.configureReceivedInvocations[0],
             .init(balance: "Sending money...")
         )
+        XCTAssertTrue(view.stopLoadingCalled)
         XCTAssertEqual(
             view.configureReceivedInvocations[1],
             .init(balance: "Insufficient balance")
         )
-        XCTAssertTrue(view.stopLoadingCalled)
     }
 }
 
