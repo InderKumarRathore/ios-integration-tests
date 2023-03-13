@@ -135,6 +135,20 @@
 			path = Formatter;
 			sourceTree = "<group>";
 		};
+		1D8A23F129BF51EC00F8D522 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */,
+				1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */,
+				1D98B85429B2FAB800BFFBA8 /* ViewController.swift */,
+				1D98B85629B2FAB800BFFBA8 /* Main.storyboard */,
+				1D98B85929B2FABA00BFFBA8 /* Assets.xcassets */,
+				1D98B85B29B2FABA00BFFBA8 /* LaunchScreen.storyboard */,
+				1D98B85E29B2FABA00BFFBA8 /* Info.plist */,
+			);
+			name = AppFiles;
+			sourceTree = "<group>";
+		};
 		1D98B84429B2FAB800BFFBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -158,16 +172,10 @@
 		1D98B84F29B2FAB800BFFBA8 /* IntegrationTestsSample */ = {
 			isa = PBXGroup;
 			children = (
+				1D8A23F129BF51EC00F8D522 /* AppFiles */,
 				1D85037329B4481300C1D691 /* Formatter */,
 				1D85036829B439AA00C1D691 /* APIs */,
 				1D98B87E29B2FC8200BFFBA8 /* Viper */,
-				1D98B85029B2FAB800BFFBA8 /* AppDelegate.swift */,
-				1D98B85229B2FAB800BFFBA8 /* SceneDelegate.swift */,
-				1D98B85429B2FAB800BFFBA8 /* ViewController.swift */,
-				1D98B85629B2FAB800BFFBA8 /* Main.storyboard */,
-				1D98B85929B2FABA00BFFBA8 /* Assets.xcassets */,
-				1D98B85B29B2FABA00BFFBA8 /* LaunchScreen.storyboard */,
-				1D98B85E29B2FABA00BFFBA8 /* Info.plist */,
 			);
 			path = IntegrationTestsSample;
 			sourceTree = "<group>";
